@@ -5,7 +5,7 @@ import { SortComponent } from './sort/sort.component'
 
 const routes: Routes = [
 {
-	path: '',
+	path: 'sort',
 	pathMatch: 'full',
 	component: SortComponent
 }
