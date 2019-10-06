@@ -1,0 +1,6 @@
+<div id="arrayVisualizerContainer" class="arrayVisualizerContainer" *ngFor="let val of array">
+	<app-bar [value]="val" [config]="config"></app-bar>
+</div>
+<button (click)="mixArray()">MIX</button>
+<button (click)="bubbleSort()">Bubble</button>
+<button (click)="selectionSort()">Selection</button>
