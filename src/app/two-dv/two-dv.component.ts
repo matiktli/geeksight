@@ -46,8 +46,20 @@ export class TwoDVComponent implements OnInit {
   }
 
   public mixArray() {
-    this.array.sort((a,b) => Math.random());
-    console.log('Mixed');
+    var currentIndex = this.array.length, temporaryValue, randomIndex;
+
+    // While there remain elements to shuffle...
+    while (0 !== currentIndex) {
+
+      // Pick a remaining element...
+      randomIndex = Math.floor(Math.random() * currentIndex);
+      currentIndex -= 1;
+
+      // And swap it with the current element.
+      temporaryValue = this.array[currentIndex];
+      this.array[currentIndex] = this.array[randomIndex];
+      this.array[randomIndex] = temporaryValue;
+    }
   }
 
   public async bubbleSort(delayTime = 1/10) {
